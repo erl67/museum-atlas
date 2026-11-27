@@ -1,0 +1,39 @@
+{
+  "mode": "development",
+  "layers": {
+    "eggs": {
+      "file": "eggs.csv", "worksheet": null, "audit": "egg-audit.csv",
+      "columns": {
+        "catalogue": "catalogNumber", "latitude": "latitude", "longitude": "longitude",
+        "country": "country", "state": "stateProvince", "county": "county", "locality": "locality",
+        "species": "scientificName", "wikipedia": "article", "database": "database", "images": null
+      },
+      "fields": [
+        {"column": "scientificName", "label": "Scientific name"}, {"column": "locality", "label": "Original locality"},
+        {"column": "collector", "label": "Collector"}, {"column": "collected", "label": "Collection date"}
+      ]
+    },
+    "types": {
+      "file": "types.csv", "worksheet": null,
+      "columns": {
+        "catalogue": "number", "latitude": "lat", "longitude": "lon",
+        "species": "name", "wikipedia": "article", "database": null, "images": null
+      },
+      "fields": [{"column": "name", "label": "Identification"}, {"column": "locality", "label": "Original locality"}]
+    },
+    "fluids": {
+      "file": "fluids.csv", "worksheet": null,
+      "columns": {"catalogue": "accession", "latitude": "north", "longitude": "east",
+        "species": "identification", "wikipedia": null, "database": null, "images": "image"},
+      "image_root": "../site/art",
+      "fields": [{"column": "identification", "label": "Scientific name"}, {"column": "place", "label": "Original locality"}]
+    },
+    "skins": {
+      "file": "skins.csv", "worksheet": null,
+      "columns": {"catalogue": "id", "latitude": "lat", "longitude": "lon", "species": "species",
+        "wikipedia": null, "database": null, "images": null},
+      "fields": [{"column": "species", "label": "Scientific name"}, {"column": "place", "label": "Original locality"},
+        {"column": "date", "label": "Collection date"}]
+    }
+  }
+}

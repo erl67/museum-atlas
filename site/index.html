@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6ef">
+  <meta http-equiv="x-dns-prefetch-control" content="off">
+  <meta name="description" content="Explore mapped catalogue records from the bird collections.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; worker-src 'self' blob:; connect-src 'self' blob:; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Museum Atlas · Bird collections</title>
+  <link rel="icon" href="./atlas-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./vendor/fonts.css">
+  <link rel="stylesheet" href="./vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="./atlas.css">
+  <script defer src="./vendor/maplibre-gl.js"></script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand"><img src="./atlas-icon.svg" width="42" height="42" alt=""><h1>Museum Atlas</h1></div>
+    <span id="demo-label" class="demo-label" hidden>Development fixtures</span>
+    <button id="guide-open" class="guide-button" type="button"><span aria-hidden="true" class="info-icon">i</span> Map guide</button>
+  </header>
+  <main id="atlas" aria-label="Bird collections atlas">
+    <div id="map" aria-label="Interactive world map"></div>
+    <section class="collection-card" aria-label="Collection layers">
+      <button id="birds-toggle" class="collection-heading" type="button" aria-expanded="true" aria-controls="bird-options" aria-label="Birds">
+        <span class="heading-text"><span class="overline">Collection layers</span><span class="collection-title">Birds</span></span>
+        <img class="vignette" src="./art/bird.webp" alt="" width="104" height="80">
+        <span class="chevron" aria-hidden="true"></span>
+      </button>
+      <div id="bird-options">
+        <fieldset id="layers"><legend class="sr-only">Bird collection layers</legend></fieldset>
+        <p class="card-hint"><span class="hint-location" aria-hidden="true">⌖</span> Select a marker to view a record.</p>
+      </div>
+    </section>
+    <div class="map-controls" role="group" aria-label="Map controls">
+      <button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in"><span aria-hidden="true" class="plus"></span></button>
+      <button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out"><span aria-hidden="true" class="minus"></span></button>
+      <button type="button" id="reset-view" aria-label="Reset world view" title="Reset world view">
+        <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+      </button>
+    </div>
+    <section id="details" class="details" aria-labelledby="detail-title" hidden></section>
+    <div id="notice" class="notice" role="status">Loading the atlas…</div>
+    <noscript><p class="notice">Enable JavaScript to explore the map.</p></noscript>
+  </main>
+  <footer class="map-footer">
+    <span id="map-count" aria-live="polite">Loading records…</span>
+    <span id="coordinates" aria-hidden="true"></span>
+    <span class="attribution">MapLibre <span>·</span> Natural Earth</span>
+  </footer>
+  <dialog id="guide" aria-labelledby="guide-title">
+    <div class="guide-inner">
+      <button type="button" class="close" id="guide-close" aria-label="Close map guide">×</button>
+      <h2 id="guide-title">Map guide</h2>
+      <h3>Explore the collection</h3>
+      <p>Open Birds to choose collection layers. Select a marker to read its catalogue record. A ring around a marker means several records share that position. Choose a catalogue number to open one.</p>
+      <h3>Read a location</h3>
+      <p>Egg records can use an approximate locality, county, or state/province position. The record names the method and preserves the catalogue’s original locality wording.</p>
+      <h3>Keyboard navigation</h3>
+      <p>Focus the map and use the arrow keys to pan. Use + and − to zoom. Press Enter to open the visible location nearest the map center. Press Escape to close a record.</p>
+      <h3>Sources</h3>
+      <p>Static bird catalogue snapshots. Map by <a href="https://maplibre.org/" target="_blank" rel="noopener noreferrer">MapLibre</a>, with geography from <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a>. Approximate egg locations also draw on the US Census Bureau and <a href="https://www.geonames.org/" target="_blank" rel="noopener noreferrer">GeoNames</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>).</p>
+      <p>Common grackle detail from Mark Catesby’s <i>The Purple Jack Daw</i>, 1731–1743. National Gallery of Art, Washington.</p>
+    </div>
+  </dialog>
+</body>
+</html>

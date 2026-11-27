@@ -1,0 +1,57 @@
+{
+  "mode": "production",
+  "layers": {
+    "eggs": {
+      "file": "G:/My Drive/Egg Slip Scanning/EggSlipReorganizationProject_FULL.xlsx - Full List.csv",
+      "worksheet": null,
+      "header_row": 1,
+      "audit": "../museum-collection-analysis/Egg_collection_location_audit.csv",
+      "columns": {
+        "catalogue": "catalogNumber", "latitude": "Decimal Latitude", "longitude": "Decimal Long.",
+        "country": "country", "state": "stateProvince", "county": "county", "locality": "locality",
+        "species": "Scientific Name", "wikipedia": null, "database": null, "images": null
+      },
+      "image_root": null,
+      "fields": [
+        {"column": "Scientific Name", "label": "Scientific name"},
+        {"column": "locality", "label": "Original locality"},
+        {"column": "Collector", "label": "Collector"},
+        {"date_parts": ["year", "month", "date collected m/d/y"], "label": "Collection date"}
+      ]
+    },
+    "types": {
+      "file": "../museum-collection-analysis/AviList Taxonomy Review/AviList_Types_taxonomic_review.xlsx",
+      "worksheet": "Type Sheet",
+      "header_row": 6,
+      "columns": {
+        "catalogue": "catalogNumber", "latitude": "Decimal Latitude", "longitude": "Decimal Long.",
+        "species": "Scientific Name", "wikipedia": null, "database": null, "images": null
+      },
+      "image_root": null,
+      "fields": [
+        {"column": "Scientific Name", "label": "Scientific name"},
+        {"column": "locality", "label": "Original locality"},
+        {"column": "Collector", "label": "Collector"},
+        {"date_parts": ["year", "month", "date collected m/d/y"], "label": "Collection date"}
+      ]
+    },
+    "fluids": {
+      "file": null, "worksheet": null, "header_row": 1,
+      "columns": {
+        "catalogue": "catalogNumber", "latitude": "decimalLatitude", "longitude": "decimalLongitude",
+        "species": "scientificName", "wikipedia": null, "database": null, "images": null
+      },
+      "image_root": null,
+      "fields": []
+    },
+    "skins": {
+      "file": null, "worksheet": null, "header_row": 1,
+      "columns": {
+        "catalogue": "catalogNumber", "latitude": "decimalLatitude", "longitude": "decimalLongitude",
+        "species": "scientificName", "wikipedia": null, "database": null, "images": null
+      },
+      "image_root": null,
+      "fields": []
+    }
+  }
+}

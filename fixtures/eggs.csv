@@ -1,0 +1,5 @@
+catalogNumber,latitude,longitude,country,stateProvince,county,locality,scientificName,collector,collected,article,database,eggCount,privateDemoNote
+E1234,40.445,-79.948,United States,Pennsylvania,Allegheny,Pittsburgh,Turdus migratorius,A. Example,May 1908,,https://example.org/collection/E1234,,EXCLUDED-FIXTURE-COLUMN
+E0007-A,,,United States,Pennsylvania,Allegheny,Pittsburgh east bank,Turdus migratorius,,,,,5,
+E0270,53.3498,-6.2603,Ireland,Leinster,Dublin,Dublin,Turdus merula,,,https://en.wikipedia.org/wiki/Common_blackbird,,3,
+E-UNRESOLVED,,,Unknown,,,Unknown,Turdus sp.,,,,,,

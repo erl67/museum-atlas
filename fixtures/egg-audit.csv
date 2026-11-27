@@ -1,0 +1,2 @@
+catalogNumber,country,stateProvince,county,locality,original_lat,original_lon,map_latitude,map_longitude,map_method,eligible_for_map
+E0007-A,United States,Pennsylvania,Allegheny,Pittsburgh east bank,,,40.446,-79.952,Locality/town approximation,False

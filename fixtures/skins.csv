@@ -1,0 +1,5 @@
+id,lat,lon,species,place,date
+S0001,51.5072,-0.1276,Apus apus,London,1911
+S0002,-33.8688,151.2093,Malurus cyaneus,Sydney,
+S-DUP,1,2,Turdus merula,First entry,
+S-DUP,3,4,Turdus merula,Second entry,

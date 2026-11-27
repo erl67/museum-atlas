@@ -1,0 +1,27 @@
+Museum Atlas basemap
+
+Natural Earth provides public-domain geographic data. The bundled geometry
+comes from the v5.1.2 repository tag. All geography is in WGS 84 longitude
+and latitude.
+
+https://github.com/nvkelso/natural-earth-vector/tree/v5.1.2/geojson
+https://www.naturalearthdata.com/about/terms-of-use/
+
+world.geojson combines these 1:110m datasets.
+  ne_110m_admin_0_countries
+  ne_110m_admin_0_boundary_lines_land
+  ne_110m_coastline
+  ne_110m_lakes
+  ne_110m_rivers_lake_centerlines
+
+provinces.geojson uses ne_50m_admin_1_states_provinces_lines. Coordinates
+were rounded to three decimal places and the regional boundary lines were
+simplified with a 0.02-degree tolerance. This 1:50m Natural Earth layer
+covers Australia, Brazil, Canada, China, India, Indonesia, Russia, South
+Africa and the United States.
+
+labels.geojson includes Natural Earth's country label positions and the
+regional label points from ne_50m_admin_1_states_provinces. The atlas adds
+its own continent, ocean and sea label positions. The style draws its
+latitude and longitude grid at runtime. The geographic data and fonts ship
+with the atlas, including the geometry used when visitors zoom in.
